@@ -17,3 +17,14 @@ class Api::UsersController < ApplicationController
     params.require(:user).permit(:username, :password)
   end
 end
+
+# $.ajax({
+#   method: 'POST',
+#   url: 'api/session',
+#   data: {
+#     user: {
+#       username: 'user1',
+#       password: 'password'
+#     }
+#   } 
+# })
