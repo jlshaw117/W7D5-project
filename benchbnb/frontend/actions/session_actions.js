@@ -28,8 +28,7 @@ const recieveCurrentUser = (currentUser) => ({
 });
 
 const logoutCurrentUser = () => ({
-    type: RECEIVE_CURRENT_USER,
-    currentUser: null
+    type: RECEIVE_CURRENT_USER
 });
 
 const receiveErrors = (errors) => ({
