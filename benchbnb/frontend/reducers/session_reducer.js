@@ -10,4 +10,4 @@ export default (oldState = {id: null}, action) => {
         default:
             return oldState;
     }
-}
+};
