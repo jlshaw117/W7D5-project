@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER} from '../actions/session_act
 import { merge } from 'lodash/merge';
 
 export default (oldState = {}, action) => {
-
+    Object.freeze(oldState);
     let newState = merge({}, oldState);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
