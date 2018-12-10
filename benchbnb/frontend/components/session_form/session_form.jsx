@@ -20,7 +20,7 @@ class SessionForm extends React.Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        this.processForm(this.state);
+        this.props.processForm(this.state);
     }
 
     render() {

@@ -6,8 +6,7 @@ export default (oldState = {}, action) => {
     const newState = merge({}, oldState);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            newState[action.currentUser.id] = action.currentUser;
-            return newState;
+            return merge({} , oldState, { [action.currentUser.id]: action.currentUser });
         default:
             return oldState;
     }
