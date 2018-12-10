@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render json: ['Good Job!']
     else
-      render json: @user.errors.full_messages, status: 418
+      render json: @user.errors.full_messages, status: 401
     end
   end
 
@@ -18,13 +18,3 @@ class Api::UsersController < ApplicationController
   end
 end
 
-# $.ajax({
-#   method: 'POST',
-#   url: 'api/session',
-#   data: {
-#     user: {
-#       username: 'user1',
-#       password: 'password'
-#     }
-#   } 
-# })
